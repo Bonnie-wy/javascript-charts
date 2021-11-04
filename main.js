@@ -36,15 +36,18 @@
     }
   };
 
-  console.log(options);
-
-
 // Init Chart
 const chart = new ApexCharts(document.querySelector('#chart'), options);
-
-  console.log(chart);
 
 // Render Chart
 chart.render();
 
+// Event Method Example
+document.querySelector('button').addEventListener('click', () => chart.updateOptions({
+  plotOptions: {
+    bar: {
+      horizontal: true
+    }
+  }
+}))
 
